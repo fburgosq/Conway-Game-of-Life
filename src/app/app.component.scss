@@ -1,0 +1,21 @@
+$border-color: #ddd;
+$bg-cell-death: #fff;
+$bg-cell-live: #666;
+
+
+#controls {
+    margin-bottom: 15px; margin-top: 15px;
+}
+
+.cell {
+    float: left;
+    cursor: pointer;
+    width: 15px; height: 15px;
+    background: white;
+    border: 0.001em solid $border-color;
+}
+
+.clear-row { clear: both; }
+
+.cell-death { background: $bg-cell-death; }
+.cell-live { background: $bg-cell-live; }

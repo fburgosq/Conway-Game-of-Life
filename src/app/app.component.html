@@ -1,0 +1,29 @@
+<div id="formControls">
+  <form>
+    <div class="form-control">
+      <label>Timer in seconds: </label>
+      <input [(ngModel)]="doTimer" name="doTimer" (keyup)="resetTimer();" >
+    </div>
+  </form>
+</div>
+
+
+<div id="controls">
+  <button *ngIf="!start_game" class="btn btn-primary" (click)="populateLife();">Start Game</button>
+  <button *ngIf="start_game" class="btn btn-primary" (click)="killPopulateLife();">Stop</button>
+  <button *ngIf="start_game" class="btn btn-primary" (click)="resetPopulateLife();">Reset</button>
+</div>
+
+
+<div id="main-grid"
+      *ngIf="gol_grid$ | async as mainGrid">
+  <div id="rows" *ngFor="let row of mainGrid; let y = index">
+    <div 
+      id="cols" 
+      *ngFor="let col of row; let x = index" 
+      [ngClass]="{'cell': true, 'cell-live': col}"
+      >
+    </div>
+    <div class="clear-row"></div>
+  </div>
+</div>
