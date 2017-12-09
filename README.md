@@ -4,7 +4,7 @@ To view this project online click next link [Online Version](http://www.yobsled.
 
 ## Change Board Settings
 
-In the file \GAMEOFLIFE\Board.php, you will find below property
+In the file \php\GAMEOFLIFE\Board.php, you will find below property
 
     private $gridOpts = [ 
         'cols'          => 30, // board/grid columns
